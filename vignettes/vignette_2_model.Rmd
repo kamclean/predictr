@@ -8,14 +8,27 @@ library(dplyr);library(predictr)
 ```
 
 ```{r}
-data <- readr::read_rds("~/shared_starsurg/recon/data/re_data_final.rds")
+data <- tibble::as_tibble(survival::colon) %>%
+  dplyr::filter(etype==2) %>% # Outcome of interest is death
+  dplyr::filter(rx!="Obs") %>%  # rx will be our binary treatment variable
+  dplyr::select(-etype,-study, -status) %>% # Remove superfluous variables
+  
+  # Convert into numeric and factor variables
+  dplyr::mutate_at(vars(obstruct, perfor, adhere, node4), function(x){factor(x, levels=c(0,1), labels = c("No", "Yes"))}) %>%
+  dplyr::mutate(rx = factor(rx),
+                mort365 = cut(time, breaks = c(-Inf, 365, Inf), labels = c("Yes", "No")),
+                sex = factor(sex, levels=c(0,1), labels = c("Female", "Male")),
+                differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
+                extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),
+                surg = factor(surg, levels = c(0,1), labels = c("Short", "Long")))
+
 data_dev = data %>% head(0.5 * nrow(data))
 data_val = data %>% tail(0.5 * nrow(data))
 ```
 
 1. Development
 ```{r}
-fit <- finalfit::glmmulti(data_dev, dependent = "com_ppc_yn", explanatory = c("pt_age", "op_duration","pt_gender", "op_urgency_2l"))
+fit <- finalfit::glmmulti(data_dev, dependent = "mort365", explanatory = c("rx", "sex","obstruct", "differ"))
 
 predictr(data = data_dev, fit = fit) %>%
   dplyr::select(event, "predict" = predict_prop)

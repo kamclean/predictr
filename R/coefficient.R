@@ -46,7 +46,7 @@ coefficient <- function(fit, coefficient = "beta"){
     dplyr::left_join(coeff, by = c("fit_id" = "variable")) %>%
     dplyr::mutate(value = ifelse(is.na(value)==T, 0, value),
                   label = ifelse(label=="", NA, label)) %>%
-    tidyr::fill(label, outcome, coefficient, .direction = "down") %>%
+    tidyr::fill(label, outcome, coefficient, .direction = "downup") %>%
     dplyr::mutate(type = ifelse(levels=="Mean (SD)", "numeric", "factor"),
                   levels = ifelse(levels=="Mean (SD)", NA, levels)) %>%
     dplyr::select(label, levels, type, value, coefficient, outcome) %>%

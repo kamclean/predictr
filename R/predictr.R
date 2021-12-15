@@ -36,21 +36,21 @@ predictr <- function(data, coefficient = NULL, fit = NULL){
 
     var_dep <- unique(coefficient$outcome)
 
+    var_exp <- coefficient %>%
+      dplyr::filter(label!="intercept") %>%
+      pull(label) %>% unique()
+
+    data <- data %>%
+      dplyr::select(all_of(c(var_dep, var_exp))) %>%
+      tidyr::drop_na() %>%
+      tibble::rowid_to_column()
+
     var_num <- coefficient %>%
       dplyr::filter(type=="numeric") %>%
       dplyr::select(label, "beta" = value)
 
     data_num <- NULL
     if(nrow(var_num)>0){
-
-      var_exp <- coefficient %>%
-        dplyr::filter(label!="intercept") %>%
-        pull(label) %>% unique()
-
-      data <- data %>%
-        dplyr::select(all_of(c(var_dep, var_exp))) %>%
-        tidyr::drop_na() %>%
-        tibble::rowid_to_column()
 
       data_num <- data %>%
         dplyr::select(rowid, all_of(var_num$label)) %>%
@@ -82,6 +82,7 @@ predictr <- function(data, coefficient = NULL, fit = NULL){
 
     out <- bind_cols(data, long) %>%
       dplyr::mutate(event  = pull(., var_dep)) %>%
-      dplyr::select(all_of(names(data)), event, predict_raw, predict_prop)}
+      dplyr::select(all_of(names(data)), event, predict_raw, predict_prop) %>%
+      dplyr::select(-rowid)}
 
   return(out)}
