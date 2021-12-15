@@ -10,11 +10,8 @@ knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2);library(predic
 ## R Markdown
 
 ```{r}
-tripod_prep <- readr::read_csv("~/predictr/data/example_tripod.csv", show_col_types = F) %>%
+tripod_prep <- readr::read_csv(predictr::example_tripod, show_col_types = F) %>%
   tripod_format(id = "score", type = "type")
-
-tripod_plot(tripod_prep)
-
 ```
 
 
