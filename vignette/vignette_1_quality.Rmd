@@ -1,0 +1,37 @@
+---
+title: "vignette_roc"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2)
+source(here::here("R/tripod_format.R"))
+source(here::here("R/tripod_plot.R"))
+source(here::here("R/probast_format.R"))
+source(here::here("R/probast_plot.R"))
+source(here::here("R/probast_table.R"))
+```
+
+## R Markdown
+
+```{r}
+tripod_prep <- readr::read_csv("~/predictr/data/example_tripod.csv", show_col_types = F) %>%
+  tripod_format(id = "score", type = "type")
+
+tripod_plot(tripod_prep)
+
+```
+
+
+
+
+```{r}
+probast_prep <- readr::read_csv("~/predictr/data/example_probast.csv", show_col_types = F) %>%
+  probast_format(id = "score", type = "type")
+
+probast_plot(probast_prep)
+
+probast_table(probast_prep)
+
+```
+

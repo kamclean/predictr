@@ -1,0 +1,46 @@
+---
+title: "vignette_roc"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+source(here::here("R/roc_metric.R"))
+source(here::here("R/roc_plot_format.R"))
+source(here::here("R/predictr.R"))
+source(here::here("R/roc_plot.R"))
+```
+
+## R Markdown
+
+```{r}
+data <- readr::read_rds("~/shared_starsurg/recon/data/re_data_final.rds")
+fit <- finalfit::glmmulti(data, dependent = "com_ppc_yn", explanatory = c("pt_age", "op_duration","pt_gender", "op_urgency_2l"))
+single <- predictr(data = data, fit = fit)
+
+```
+
+
+
+```{r cars, message=F, warning=F, error=F}
+ single %>%
+  roc_plot_format(event = "event", predict = "predict_prop",confint = F) %>%
+  roc_plot()
+
+single %>%
+  roc_metric(event  = "event", predict = "predict_prop")
+```
+
+
+```{r}
+multiple = readr::read_rds(here::here("data/example_prediction.rds")) %>%
+  dplyr::mutate(binary = ifelse(prediction>0.02, 1, 0))
+
+multiple %>%
+  roc_metric(model = "model", event  = "event", predict = "prediction")
+
+ multiple %>%
+  roc_plot_format(model = "model", event = "event", predict = "prediction",confint = F) %>%
+  roc_plot()
+```
+

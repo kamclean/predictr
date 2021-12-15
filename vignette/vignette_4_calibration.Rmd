@@ -1,0 +1,45 @@
+---
+title: "vignette_roc"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+source(here::here("R/cal_table.R"))
+source(here::here("R/cal_plot.R"))
+source(here::here("R/cal_metric.R"))
+source(here::here("R/predictr.R"))
+```
+
+## R Markdown
+
+
+```{r}
+var_exp = c("pt_age", "pt_sex", "pt_egfr", "op_approach_planned_2l", "pt_asa", "pt_preop_ace")
+var_dep = "aki_yn"
+
+data <- readr::read_rds("~/StarSurg/IMAGINE/im_paper/im_data/score_data.rds") %>%
+  dplyr::select(project, all_of(c(var_dep, var_exp)))
+
+fit <- finalfit::glmmulti(data, dependent = var_dep, explanatory = var_exp)
+```
+
+```{r cars}
+cal_table(fit = fit)
+
+data %>%
+  predictr(fit = fit) %>%
+  cal_table(risk_ntile = 5, risk_class = c(0.1, 0.2, 0.3, 0.4))
+```
+
+```{r}
+cal_plot(predictr = data %>% predictr(fit = fit))
+cal_plot(fit = fit, risk_ntile = 5)
+cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.1,0.2, 0.3, 0.4))
+```
+
+
+```{r}
+cal_metric(fit = fit, hltest = T)
+cal_metric(predictr = data %>% predictr(fit = fit))
+```

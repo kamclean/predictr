@@ -1,0 +1,53 @@
+---
+title: "vignette_model"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+source("~/predictr/R/coefficient.R")
+source("~/predictr/R/predictr.R")
+```
+
+```{r}
+data <- readr::read_rds("~/shared_starsurg/recon/data/re_data_final.rds")
+data_dev = data %>% head(0.5 * nrow(data))
+data_val = data %>% tail(0.5 * nrow(data))
+```
+
+1. Development
+```{r}
+fit <- finalfit::glmmulti(data_dev, dependent = "com_ppc_yn", explanatory = c("pt_age", "op_duration","pt_gender", "op_urgency_2l"))
+
+predictr(data = data_dev, fit = fit) %>%
+  dplyr::select(event, "predict" = predict_prop)
+```
+2. Validation (with original model)
+```{r}
+predictr(data = data_val, fit = fit) %>%
+  dplyr::select(event, "predict" = predict_prop)
+```
+
+3. Validation (with coefficents only)
+
+```{r}
+fit$coefficients
+
+coefficient(fit)
+```
+
+
+Beta 
+```{r}
+predictr(data = data_val,
+         coefficient = coefficient(fit)) %>%
+  dplyr::select(event, "predict" = predict_prop)
+```
+
+Odds Ratio 
+
+```{r}
+predictr(data = data_val,
+         coefficient = coefficient(fit, coefficient = "or")) %>%
+  dplyr::select(event, "predict" = predict_prop)
+```
