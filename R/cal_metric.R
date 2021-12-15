@@ -23,7 +23,7 @@ cal_metric <- function(predictr = NULL, fit = NULL, hltest  = F, risk_ntile = 10
     data <- predictr %>%
       dplyr::select(event, predict_prop, predict_raw)}
 
-  if(is.null(fit)==F&is.null(predictr)==T){
+  if(is.null(predictr)==T&is.null(fit)==F){
     var_dep <- stringr::str_split_fixed(fit$formula, " ~ ", 2)[1]
     var_exp <- stringr::str_split_fixed(fit$formula, " ~ ", 2)[2] %>% stringr::str_split("\\+") %>% unlist()
 

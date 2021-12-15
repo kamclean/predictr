@@ -23,8 +23,8 @@ roc_plot_format <- function(data, model = NULL, event = "event", predict = "pred
     dplyr::mutate(model = dplyr::pull(., model),
                   response = dplyr::pull(., event) %>% factor(),
                   predictor = dplyr::pull(., predict) %>% as.numeric()) %>%
-    tidyr::drop_na() %>%
-    dplyr::select(model, response, predictor)
+    dplyr::select(model, response, predictor) %>%
+    tidyr::drop_na()
 
   output <- clean %>%
     dplyr::group_split(model) %>%

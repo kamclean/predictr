@@ -10,33 +10,56 @@ knitr::opts_chunk$set(echo = F);library(dplyr);library(predictr)
 ## R Markdown
 
 ```{r}
-data <- readr::read_rds("~/shared_starsurg/recon/data/re_data_final.rds")
-fit <- finalfit::glmmulti(data, dependent = "com_ppc_yn", explanatory = c("pt_age", "op_duration","pt_gender", "op_urgency_2l"))
-single <- predictr(data = data, fit = fit)
+data <- tibble::as_tibble(survival::colon) %>%
+  dplyr::filter(etype==2) %>% # Outcome of interest is death
+  dplyr::filter(rx!="Obs") %>%  # rx will be our binary treatment variable
+  dplyr::select(-etype,-study, -status) %>% # Remove superfluous variables
+  
+  # Convert into numeric and factor variables
+  dplyr::mutate_at(vars(obstruct, perfor, adhere, node4), function(x){factor(x, levels=c(0,1), labels = c("No", "Yes"))}) %>%
+  dplyr::mutate(rx = factor(rx),
+                mort365 = cut(time, breaks = c(-Inf, 365, Inf), labels = c("Yes", "No")),
+                mort365 = factor(mort365, levels = c("No", "Yes")),
+                sex = factor(sex, levels=c(0,1), labels = c("Female", "Male")),
+                differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
+                extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),
+                surg = factor(surg, levels = c(0,1), labels = c("Short", "Long")))
+
+fit1 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx"))
+
+predict1 <- predictr(data = data, fit = fit1)
 
 ```
 
 
 
 ```{r cars, message=F, warning=F, error=F}
- single %>%
-  roc_plot_format(event = "event", predict = "predict_prop",confint = F) %>%
+ predict1 %>%
+  roc_plot_format(event = "event", predict = "predict_prop",confint = F, smooth=F) %>%
   roc_plot()
 
-single %>%
+predict1 %>%
   roc_metric(event  = "event", predict = "predict_prop")
 ```
 
 
 ```{r}
-multiple = readr::read_rds(here::here("data/example_prediction.rds")) %>%
-  dplyr::mutate(binary = ifelse(prediction>0.02, 1, 0))
+fit2 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx", "sex"))
+fit3 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx", "sex","obstruct"))
+fit4 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx", "sex","obstruct", "differ"))
+
+multiple <- list(fit1, fit2, fit3, fit4) %>%
+  purrr::map_dfr(function(x){predictr(data = data, fit = x)}, .id="model") %>%
+  dplyr::mutate(model = factor(model, levels = c(1:4),
+                               labels = c("Rx", "Rx & Sex", "Rx, Sex, & Obstruct", "Rx, Sex, Obstruct, & Differ"))) %>%
+  dplyr::mutate(binary = ifelse(predict_prop>0.10, 1, 0))
 
 multiple %>%
-  roc_metric(model = "model", event  = "event", predict = "prediction")
+  roc_metric(model = "model", event  = "event", predict = "predict_prop") %>%
+  tidyr::pivot_wider(id_cols = c("name"), names_from = "model", values_from = "metric")
 
  multiple %>%
-  roc_plot_format(model = "model", event = "event", predict = "prediction",confint = F) %>%
+  roc_plot_format(model = "model", event = "event", predict = "predict_prop",confint = F, smooth = F) %>%
   roc_plot()
 ```
 

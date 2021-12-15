@@ -20,14 +20,3 @@ NULL
 #' @usage data(example_tripod)
 #' @keywords data
 NULL
-
-# example_prediction
-#' @docType data
-#' @title Example dataset of model predictions
-#' @name example_prediction
-#' @aliases example_prediction
-#' @description Example dataset of model predictions for use within vignettes
-#' @format A data frame with 600 rows and 3 variables.
-#' @usage data(example_prediction)
-#' @keywords data
-NULL

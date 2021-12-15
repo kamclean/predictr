@@ -17,6 +17,7 @@ data <- tibble::as_tibble(survival::colon) %>%
   dplyr::mutate_at(vars(obstruct, perfor, adhere, node4), function(x){factor(x, levels=c(0,1), labels = c("No", "Yes"))}) %>%
   dplyr::mutate(rx = factor(rx),
                 mort365 = cut(time, breaks = c(-Inf, 365, Inf), labels = c("Yes", "No")),
+                mort365 = factor(mort365, levels = c("No", "Yes")),
                 sex = factor(sex, levels=c(0,1), labels = c("Female", "Male")),
                 differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
                 extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),

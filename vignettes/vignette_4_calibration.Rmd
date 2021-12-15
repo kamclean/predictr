@@ -11,13 +11,23 @@ knitr::opts_chunk$set(echo = F);library(dplyr);library(predictr)
 
 
 ```{r}
-var_exp = c("pt_age", "pt_sex", "pt_egfr", "op_approach_planned_2l", "pt_asa", "pt_preop_ace")
-var_dep = "aki_yn"
+data <- tibble::as_tibble(survival::colon) %>%
+  dplyr::filter(etype==2) %>% # Outcome of interest is death
+  dplyr::filter(rx!="Obs") %>%  # rx will be our binary treatment variable
+  dplyr::select(-etype,-study, -status) %>% # Remove superfluous variables
+  
+  # Convert into numeric and factor variables
+  dplyr::mutate_at(vars(obstruct, perfor, adhere, node4), function(x){factor(x, levels=c(0,1), labels = c("No", "Yes"))}) %>%
+  dplyr::mutate(rx = factor(rx),
+                mort365 = cut(time, breaks = c(-Inf, 365, Inf), labels = c("Yes", "No")),
+                mort365 = factor(mort365, levels = c("No", "Yes")),
+                sex = factor(sex, levels=c(0,1), labels = c("Female", "Male")),
+                differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
+                extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),
+                surg = factor(surg, levels = c(0,1), labels = c("Short", "Long")))
 
-data <- readr::read_rds("~/StarSurg/IMAGINE/im_paper/im_data/score_data.rds") %>%
-  dplyr::select(project, all_of(c(var_dep, var_exp)))
-
-fit <- finalfit::glmmulti(data, dependent = var_dep, explanatory = var_exp)
+fit <- finalfit::glmmulti(data, dependent = "mort365",
+                          explanatory = c("rx", "sex","obstruct", "differ", "adhere", "perfor", "extent", "nodes", "surg"))
 ```
 
 ```{r cars}
@@ -25,13 +35,13 @@ cal_table(fit = fit)
 
 data %>%
   predictr(fit = fit) %>%
-  cal_table(risk_ntile = 5, risk_class = c(0.1, 0.2, 0.3, 0.4))
+  cal_table(risk_ntile = 5, risk_class = c(0.05, 0.06, 0.1, 0.2))
 ```
 
 ```{r}
-cal_plot(predictr = data %>% predictr(fit = fit))
+cal_plot(predictr = data %>% predictr(fit = fit), se=T)
 cal_plot(fit = fit, risk_ntile = 5)
-cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.1,0.2, 0.3, 0.4))
+cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.05, 0.06, 0.1, 0.2))
 ```
 
 

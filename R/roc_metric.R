@@ -22,8 +22,9 @@ roc_metric <- function(data, model = NULL, event = "event", predict = "predictio
     dplyr::mutate(model = dplyr::pull(., model),
                   response = dplyr::pull(., event) %>% factor(),
                   predictor = dplyr::pull(., predict)) %>%
-    tidyr::drop_na() %>%
-    dplyr::select(model, response, predictor)
+    dplyr::select(model, response, predictor) %>%
+    tidyr::drop_na()
+
 
   pred_num <- NULL; pred_bin <- NULL
 
