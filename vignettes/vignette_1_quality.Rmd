@@ -4,12 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2)
-source(here::here("R/tripod_format.R"))
-source(here::here("R/tripod_plot.R"))
-source(here::here("R/probast_format.R"))
-source(here::here("R/probast_plot.R"))
-source(here::here("R/probast_table.R"))
+knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2);library(predictr)
 ```
 
 ## R Markdown

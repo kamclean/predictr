@@ -4,11 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F)
-source(here::here("R/cal_table.R"))
-source(here::here("R/cal_plot.R"))
-source(here::here("R/cal_metric.R"))
-source(here::here("R/predictr.R"))
+knitr::opts_chunk$set(echo = F);library(dplyr);library(predictr)
 ```
 
 ## R Markdown

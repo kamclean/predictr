@@ -4,9 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-library(dplyr)
-source("~/predictr/R/coefficient.R")
-source("~/predictr/R/predictr.R")
+library(dplyr);library(predictr)
 ```
 
 ```{r}
