@@ -10,8 +10,15 @@ knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2);library(predic
 ## R Markdown
 
 ```{r}
-tripod_prep <- readr::read_csv(predictr::example_tripod, show_col_types = F) %>%
+data("example_tripod", package = "predictr")
+tripod_prep <- predictr::example_tripod %>%
   tripod_format(id = "score", type = "type")
+
+usethis::use_data_raw("example_tripod")
+usethis::use_data_raw("example_probast")
+usethis::use_data_raw("example_prediction")
+
+
 ```
 
 
