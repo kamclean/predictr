@@ -9,6 +9,7 @@ roc_plot_format(
   model = NULL,
   event = "event",
   predict = "predict",
+  smooth = TRUE,
   confint = TRUE
 )
 }
@@ -20,6 +21,8 @@ roc_plot_format(
 \item{event}{String specifying the column name containing the binary outcome of interest (default ="event")}
 
 \item{predict}{String specifying the column name containing predicted probability of outcome (default ="prediction")}
+
+\item{smooth}{Logical value specifying if the ROC curve should be smoothed (default=TRUE)}
 
 \item{confint}{Logical value specifying if the confidence interval of the sensitivity/specificity should be calculated.}
 }
