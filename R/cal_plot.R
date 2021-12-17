@@ -74,17 +74,18 @@ cal_plot <- function(predictr = NULL, fit = NULL, risk_ntile = NULL, risk_class 
 
   if(is.null(risk_ntile)==T&is.null(risk_class)==F){
     class_data <- cal_table(predictr = predictr, fit = fit, risk_class = risk_class)$class
+
+    levels(class_data$class) <- levels(class_data$class) %>%
+      stringr::str_remove_all("\\(|\\]") %>%
+      stringr::str_replace_all(",", " to ")
+
     out <- class_data %>%
-      dplyr::mutate(class = as.numeric(class),
-                    class_label = paste0(class, "\n(", format(round(pred_min, 3), nsmall = 3), " to ",
-                                         format(round(pred_max, 3), nsmall = 3), ")"),
-                    class_label = factor(class_label, levels = unique(class_label))) %>%
       dplyr::group_by(class) %>%
       dplyr::mutate(binom::binom.wilson(x = event, n = n, methods = "wilson") %>%
                       dplyr::select(lower, upper)) %>%
       dplyr::ungroup() %>%
       ggplot() +
-      aes(x = class_label, y = prop) +
+      aes(x = class, y = prop) +
       geom_col(colour = "light blue", fill = "light blue") +
       geom_point(size = 4) +
       geom_linerange(aes(ymin = lower, ymax = upper), size = 2) +
