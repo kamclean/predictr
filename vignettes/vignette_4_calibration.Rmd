@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F);library(dplyr);library(predictr)
+knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr)
 ```
 
 ## R Markdown
@@ -31,11 +31,11 @@ fit <- finalfit::glmmulti(data, dependent = "mort365",
 ```
 
 ```{r cars}
-cal_table(fit = fit)
+cal_table(fit = fit) %>% knitr::kable()
 
 data %>%
   predictr(fit = fit) %>%
-  cal_table(risk_ntile = 5, risk_class = c(0.05, 0.06, 0.1, 0.2))
+  cal_table(risk_ntile = 5, risk_class = c(0.05, 0.06, 0.1, 0.2)) %>% knitr::kable()
 ```
 
 ```{r}
@@ -46,6 +46,6 @@ cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.05, 0.06, 0.1
 
 
 ```{r}
-cal_metric(fit = fit, hltest = T)
-cal_metric(predictr = data %>% predictr(fit = fit))
+cal_metric(fit = fit, hltest = T) %>% knitr::kable()
+cal_metric(predictr = data %>% predictr(fit = fit)) %>% knitr::kable()
 ```

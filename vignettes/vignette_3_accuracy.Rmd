@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F);library(dplyr);library(predictr)
+knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr)
 ```
 
 ## R Markdown
@@ -39,7 +39,7 @@ predict1 <- predictr(data = data, fit = fit1)
   roc_plot()
 
 predict1 %>%
-  roc_metric(event  = "event", predict = "predict_prop")
+  roc_metric(event  = "event", predict = "predict_prop") %>% knitr::kable()
 ```
 
 
@@ -56,7 +56,8 @@ multiple <- list(fit1, fit2, fit3, fit4) %>%
 
 multiple %>%
   roc_metric(model = "model", event  = "event", predict = "predict_prop") %>%
-  tidyr::pivot_wider(id_cols = c("name"), names_from = "model", values_from = "metric")
+  tidyr::pivot_wider(id_cols = c("name"), names_from = "model", values_from = "metric") %>%
+  knitr::kable()
 
  multiple %>%
   roc_plot_format(model = "model", event = "event", predict = "predict_prop",confint = F, smooth = F) %>%

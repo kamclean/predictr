@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2);library(predictr)
+knitr::opts_chunk$set(echo = T); library(dplyr); library(ggplot2);library(predictr)
 ```
 
 ## R Markdown
@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = F); library(dplyr); library(ggplot2);library(predic
 ```{r}
 tripod_prep <- predictr::example_tripod %>%
   tripod_format(id = "score", type = "type")
+
+knitr::kable(head(tripod_prep, 10))
 ```
 
 
@@ -23,7 +25,7 @@ probast_prep <- predictr::example_probast %>%
 
 probast_plot(probast_prep)
 
-probast_table(probast_prep)
+probast_table(probast_prep) %>% head(10) %>% knitr::kable()
 
 ```
 
