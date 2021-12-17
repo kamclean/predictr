@@ -374,6 +374,7 @@ at the intercept/slope instead.
     cal_plot(predictr = data %>% predictr(fit = fit), se=T)
 
 ![](vignette_3_calibration_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+
 We can assess the intercept and slope of the calibration curve using
 `cal_metric()`. A “perfect” calibration will have an intercept of 0 and
 a slope of 1.
