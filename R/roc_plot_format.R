@@ -5,8 +5,8 @@
 #' @param model Optional string specifying the column name specifying which model each outcome/prediction belongs to (default ="model"). This allows multiple models to be assessed within 1 function.
 #' @param event String specifying the column name containing the binary outcome of interest (default ="event")
 #' @param predict String specifying the column name containing predicted probability of outcome (default ="prediction")
-#' @param smooth Logical value specifying if the ROC curve should be smoothed (default=TRUE)
-#' @param confint Logical value specifying if the confidence interval of the sensitivity/specificity should be calculated.
+#' @param smooth Logical value specifying if the ROC curve should be smoothed (default=FALSE)
+#' @param confint Logical value specifying if the confidence interval of the sensitivity/specificity should be calculated (default = FALSE)
 #' @return Tibble with sensitivity/specificity for one or more models.
 #' @import tibble
 #' @import dplyr
@@ -15,7 +15,7 @@
 #' @importFrom purrr map_df
 #' @export
 
-roc_plot_format <- function(data, model = NULL, event = "event", predict = "predict", smooth = TRUE, confint = TRUE){
+roc_plot_format <- function(data, model = NULL, event = "event", predict = "predict", smooth = F, confint = F){
 
   if(is.null(model)==T){data <- data %>% mutate(model = "1")}
 

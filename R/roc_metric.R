@@ -76,23 +76,22 @@ roc_metric <- function(data, model = NULL, event = "event", predict = "predictio
       dplyr::group_split(model) %>%
       purrr::map_df(function(x){
 
-    result <- x %>%
-      dplyr::select(all_of(c(original, predictor))) %>%
+    result <- clean %>%
+      dplyr::select(response, predictor) %>%
       dplyr::mutate(across(everything(), forcats::fct_rev)) %>%
       table() %>%
       epiR::epi.tests()
 
-    tibble::enframe(result$elements) %>%
-      dplyr::filter(name %in% c("aprev", "tprev", "diag.acc", "sensitivity",  "specificity",  "pv.positive",
-                                "pv.negative", "lr.positive",  "lr.negative")) %>%
+    tibble::enframe(result$detail) %>%
+      dplyr::filter(name %in% c("ap", "tp", "diag.ac", "se",  "sp",  "pv.pos",
+                                "pv.neg", "lr.pos",  "lr.neg")) %>%
       dplyr::mutate(name = factor(name,
-                                  levels = c("aprev", "tprev", "diag.acc", "sensitivity",  "specificity",  "lr.positive",  "lr.negative",  "pv.positive","pv.negative"),
+                                  levels = c("ap", "tp", "diag.ac", "se",  "sp",  "lr.pos",  "lr.neg",  "pv.pos","pv.neg"),
                                   labels = c("Predicted Prevalence", "True Prevalence", "Diagnostic Accuracy", "Sensitivity", "Specificity",
                                              "Positive Likelihood Ratio", "Negative Likelihood Ratio",
-                                             "Positive Predictive Value", "Negative Predictive Value"))) %>%
+                                             "Positive Predictive Value (PPV)", "Negative Predictive Value (NPV)"))) %>%
       dplyr::arrange(name) %>%
-      dplyr::mutate(abbr = c("", "", "", "SEN", "SPE", "PLR", "NLR", "PPV", "NPV")) %>%
-      dplyr::select(name, abbr, value) %>%
+      dplyr::select(name, value) %>%
       tidyr::unnest(cols = "value") %>%
       dplyr::rename("estimate" = est, "lci" = lower, "uci" = upper) %>%
       dplyr::mutate(metric = paste0(format(round(estimate, 3), digits=3),
