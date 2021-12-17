@@ -1,6 +1,8 @@
 ---
 title: "vignette_roc"
 output: md_document
+always_allow_html: true
+
 ---
 
 ```{r setup, include=FALSE}

@@ -1560,10 +1560,7 @@ in a massively useful / informative format:
     ##      0.9046116      2.4976418
 
 Instead you can use the `predictr::coefficient()` function to get this
-information out in a useful and shareable format. This provides all the
-information required for subsequent external validation using the
-`predictr()` function, and can be used as an alternative to the `fit`
-parameter.
+information out in a useful and shareable format.
 
     coefficient(fit) %>% knitr::kable()
 
@@ -1794,12 +1791,16 @@ mort365
 </tbody>
 </table>
 
+This provides all the information required for subsequent external
+validation using the `predictr()` function, and can be used as an
+alternative to the `fit` parameter.
+
 #### Prediction using model coefficients
 
 For coefficents to be used within `predictr()`, this must be in the
 format provided by the `coefficient()` function (whether using
-`coefficient(fit)` or manually extracting from a publication to create a
-table).
+`coefficient(fit)` or manually extracting from a publication to create
+the required table).
 
     predictr(data = data_val,
              coefficient = coefficient(fit)) %>%

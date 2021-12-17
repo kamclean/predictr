@@ -90,13 +90,13 @@ sen\_uci
 0.01
 </td>
 <td style="text-align:right;">
-0.9906783
+0.9907376
 </td>
 <td style="text-align:right;">
-0.9880342
+0.9879495
 </td>
 <td style="text-align:right;">
-0.9935415
+0.9934283
 </td>
 </tr>
 <tr>
@@ -104,13 +104,13 @@ sen\_uci
 0.02
 </td>
 <td style="text-align:right;">
-0.9813566
+0.9814751
 </td>
 <td style="text-align:right;">
-0.9760684
+0.9758990
 </td>
 <td style="text-align:right;">
-0.9870830
+0.9868566
 </td>
 </tr>
 <tr>
@@ -118,13 +118,13 @@ sen\_uci
 0.03
 </td>
 <td style="text-align:right;">
-0.9720350
+0.9722127
 </td>
 <td style="text-align:right;">
-0.9641026
+0.9638485
 </td>
 <td style="text-align:right;">
-0.9806245
+0.9802849
 </td>
 </tr>
 <tr>
@@ -132,13 +132,13 @@ sen\_uci
 0.04
 </td>
 <td style="text-align:right;">
-0.9627133
+0.9629502
 </td>
 <td style="text-align:right;">
-0.9521368
+0.9517980
 </td>
 <td style="text-align:right;">
-0.9741660
+0.9737132
 </td>
 </tr>
 <tr>
@@ -146,13 +146,13 @@ sen\_uci
 0.05
 </td>
 <td style="text-align:right;">
-0.9533916
+0.9536878
 </td>
 <td style="text-align:right;">
-0.9401709
+0.9397475
 </td>
 <td style="text-align:right;">
-0.9677075
+0.9671416
 </td>
 </tr>
 <tr>
@@ -160,13 +160,13 @@ sen\_uci
 0.06
 </td>
 <td style="text-align:right;">
-0.9440699
+0.9444254
 </td>
 <td style="text-align:right;">
-0.9282051
+0.9276969
 </td>
 <td style="text-align:right;">
-0.9612490
+0.9605699
 </td>
 </tr>
 <tr>
@@ -174,13 +174,13 @@ sen\_uci
 0.07
 </td>
 <td style="text-align:right;">
-0.9347482
+0.9351629
 </td>
 <td style="text-align:right;">
-0.9162393
+0.9156464
 </td>
 <td style="text-align:right;">
-0.9547905
+0.9539982
 </td>
 </tr>
 <tr>
@@ -188,13 +188,13 @@ sen\_uci
 0.08
 </td>
 <td style="text-align:right;">
-0.9254266
+0.9259005
 </td>
 <td style="text-align:right;">
-0.9042735
+0.9035959
 </td>
 <td style="text-align:right;">
-0.9483320
+0.9474265
 </td>
 </tr>
 <tr>
@@ -202,13 +202,13 @@ sen\_uci
 0.09
 </td>
 <td style="text-align:right;">
-0.9161049
+0.9166380
 </td>
 <td style="text-align:right;">
-0.8923077
+0.8915454
 </td>
 <td style="text-align:right;">
-0.9418735
+0.9408548
 </td>
 </tr>
 </tbody>
@@ -237,7 +237,7 @@ Now we have the outputted dataframe from `roc_plot_format()` (aka
     roc_format1 %>%
       roc_plot()
 
-![](vignette_3_accuracy_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](vignette_2_accuracy_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
 ### Accuracy Metrics
 
@@ -1198,7 +1198,7 @@ Negative Predictive Value (NPV)
       roc_plot_format(model = "model", event = "event", predict = "predict_prop",confint = F, smooth = F) %>%
       roc_plot()
 
-![](vignette_3_accuracy_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](vignette_2_accuracy_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 From above, we can see that as the number of variables added increases,
 there is improved accuracy of the model for predicting death at 1 year.

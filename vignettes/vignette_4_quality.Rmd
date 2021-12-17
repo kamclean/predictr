@@ -1,0 +1,124 @@
+---
+title: "vignette_roc"
+output: md_document
+always_allow_html: true
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T); library(dplyr); library(ggplot2);library(predictr)
+```
+
+# Quality assessment of multivariable prediction models
+
+For systematic reviews of multivariable prediction models the "Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis" (TRIPOD) and "Prediction model Risk Of Bias ASsessment Tool" (PROBAST) guidelines should be used to assess the reporting and methodological quality of the predictive models developed.
+
+Displaying this output for papers can be a challenging task, particularly as plots. `predictr` provides several functions to aid in this.
+
+
+## Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis (TRIPOD) 
+
+Let's use an inbuilt example from `predictr` of papers which have been assessed against the TRIPOD statement.
+
+Note there are 3 key categories of columns here:
+
+  1. ID column ("score"): This is needed to identify which paper is referred to in each row and must be **unique** for each row.
+  
+  
+  2. Type column ("type"): This is needed to identify what type of models are done in the paper (is it derivation and/or validation of a model). This is essential as this changes what items are needed to be assessed in the TRIPOD statement.
+  
+  - This must only contain 3 values: "d" = derivation only, "dv" = derivation and validation" or "v" = validation only.
+   
+   
+  3. "item_" columns: These refer to each respective item listed in the TRIPOD statement (item 1 to 22).
+  
+  - The names of these columns must be exactly the same as this example or else the subsequent function will not work.
+  
+  - This must only contain 4 values as specified in the TRIPOD statement ("Yes", "Partial", "No", or "Not applicable"). 
+
+```{r}
+predictr::example_tripod %>% head(10) %>% knitr::kable()
+```
+
+Once your TRIPOD data matches the format of `predictr::example_tripod`, this can be put into the `tripod_format()` function to prepare this for plotting.
+
+ - You can specify what the "id" and "type" columns are called, but as mentioned above the naming format of the "item_" columns must match exactly.
+
+```{r}
+tripod_prep <- predictr::example_tripod %>%
+  tripod_format(id = "score", type = "type")
+
+knitr::kable(head(tripod_prep, 10))
+```
+
+Now we have the data in the required format, we can then plot it using `tripod_plot()`. This produces a high quality ggplot of the TRIPOD results.
+
+```{r, fig.height=7}
+ predictr::example_tripod %>%
+  tripod_format(id = "score", type = "type") %>%
+  tripod_plot()
+```
+
+## Prediction model Risk Of Bias ASsessment Tool (PROBAST)
+
+Let's use an inbuilt example from `predictr` of papers which have been assessed against the PROBAST tool.
+
+Like the example above for TRIPOD, there are 4 key categories of columns here:
+
+  1. ID column ("score"): This is needed to identify which paper is referred to in each row and must be **unique** for each row.
+  
+  
+  2. Type column ("type"): This is needed to identify what type of models are done in the paper (is it derivation and/or validation of a model). This is essential as this changes what items are needed to be assessed in the PROBAST tool.
+  
+  - This must only contain 3 values: "d" = derivation only, "dv" = derivation and validation" or "v" = validation only.
+   
+   
+  3. "rob_" columns: These refer to each respective risk of bias (ROB) assessment using PROBAST for each domain (1 = "Participants", 2 = "Predictors", 3 = "Outcome", and 4 = "Analysis") and the respective screening questions.
+  
+  - The names of these columns must be exactly the same as this example or else the subsequent function will not work.
+  
+  - This must only contain 5 values as specified in the PROBAST tool (“yes,” “probably yes,” “probably no,” “no,” or “no information”). 
+  
+  
+   4. "app_" columns: These refer to each respective applicability assessment using PROBAST for each domain (1 = "Participants", 2 = "Predictors", and 3 = "Outcome").
+  
+  - The names of these columns must be exactly the same as this example or else the subsequent function will not work.
+  
+  - This must only contain 3 values as specified in the PROBAST tool (low, unclear, high). Note this assessment is specifically "concerns regarding applicability", rather than whether the model is applicable.
+  
+  - The 4th domain ("Analysis") is not assessed in PROBAST regarding "concerns regarding applicability".
+
+```{r}
+predictr::example_probast %>% head(10) %>% knitr::kable()
+```
+
+Once your TRIPOD data matches the format of `predictr::example_tripod`, this can be put into the `tripod_format()` function to prepare this for plotting.
+
+ - You can specify what the "id" and "type" columns are called, but as mentioned above the naming format of the "item_" columns must match exactly.
+
+```{r}
+probast_prep <- predictr::example_probast %>%
+  probast_format(id = "score", type = "type")
+
+knitr::kable(head(probast_prep, 10))
+```
+
+
+Now we have the data in the required format, we can then plot it using `probast_plot()`. This produces a high quality ggplot of the PROBAST results.
+
+```{r, fig.height=7, fig.width=5}
+ predictr::example_probast %>%
+  probast_format(id = "score", type = "type") %>%
+  probast_plot()
+```
+
+For PROBAST, the risk of bias (ROB) assessment is a composite assessment across all screening questions in the domain. This is calculated automatically by the `probast_plot()` function. However, if you want that ROB screening question data for a supplementary table, then you can use the `probast_table()` function.
+
+
+```{r}
+ predictr::example_probast %>%
+  probast_format(id = "score", type = "type") %>%
+  probast_table() %>% knitr::kable()
+
+```
+
