@@ -133,16 +133,20 @@ The normal fit object has coefficients stored in it, but not necessarily in a ma
 fit$coefficients
 ```
 
-Instead you can use the `predictr::coefficient()` function to get this information out in a useful and shareable format. This provides all the information required for subsequent external validation using the `predictr()` function, and can be used as an alternative to the `fit` parameter.
+Instead you can use the `predictr::coefficient()` function to get this information out in a useful and shareable format. 
 
 
 ```{r}
 coefficient(fit) %>% knitr::kable()
 ```
 
+
+This provides all the information required for subsequent external validation using the `predictr()` function, and can be used as an alternative to the `fit` parameter.
+
+
 #### Prediction using model coefficients
 
-For coefficents to be used within `predictr()`, this must be in the format provided by the `coefficient()` function (whether using `coefficient(fit)` or manually extracting from a publication to create a table). 
+For coefficents to be used within `predictr()`, this must be in the format provided by the `coefficient()` function (whether using `coefficient(fit)` or manually extracting from a publication to create the required table). 
 
 
 ```{r}

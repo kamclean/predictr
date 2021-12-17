@@ -1,13 +1,21 @@
 ---
 title: "vignette_roc"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr)
 ```
 
-## R Markdown
+# Vignette: Diagnostic / Prognostic Accuracy
+
+## Load data
+
+
+
+## Load data
+
+Firstly let's re-load our example data (the `survival::colon`)
 
 ```{r}
 data <- tibble::as_tibble(survival::colon) %>%
@@ -24,24 +32,89 @@ data <- tibble::as_tibble(survival::colon) %>%
                 differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
                 extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),
                 surg = factor(surg, levels = c(0,1), labels = c("Short", "Long")))
-
-fit1 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx"))
-
-predict1 <- predictr(data = data, fit = fit1)
-
 ```
 
 
+Now lets create our model fit (`fit1`) and derive our predictions based on our model (`predict1`).
 
-```{r cars, message=F, warning=F, error=F}
- predict1 %>%
-  roc_plot_format(event = "event", predict = "predict_prop",confint = F, smooth=F) %>%
+We are starting with a very simple model trying to predict deatn at 1 year ("mort365") using just 1 variable ("rx" aka treatment receieved).
+
+```{r}
+fit1 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx"))
+
+predict1 <- predictr(data = data, fit = fit1)
+```
+
+
+## Comparing accuracy across a predictive model
+
+
+### Receiver Operating Characteristic (ROC) curves
+
+One of the most common ways to visualise the performance of the model is using Receiver Operating Characteristic (ROC) curves. This involves plotting the sensitivity and specificity of the model against one another.
+
+There are 2 steps required to make these using `predictr`:
+
+
+#### 1). `roc_plot_format()`
+
+This function takes the predictions from the `predictr()` function output, and provides a tibble of the sensitivity and specificity of the model required for plotting.
+
+```{r, message=F, warning=F, error=F}
+roc_format1 <- predict1 %>%
+  roc_plot_format(event = "event", predict = "predict_prop",confint = T, smooth=T)
+
+roc_format1 %>% head(10) %>%   knitr::kable()
+```
+
+There are two ways you can modify `roc_plot_format()`
+
+ - You can calculate confidence intervals for the curve (`confint = TRUE`), however please note this can take a while to calculate.
+ 
+ - You can also apply smoothing to the curve data (`smooth = TRUE`) to remove any irregularities in the curve (this will only work if there's sufficent data in the model)
+ 
+
+#### 2). `roc_plot()`
+
+Now we have the outputted dataframe from `roc_plot_format()` (aka `roc_format1`), we can then plot this as a ROC curve in ggplot.
+
+ - In this context, we can see the model is poor at predicting the likelihood of death at 1 year (barely better than flipping a coin!)
+
+```{r, message=F, warning=F, error=F}
+roc_format1 %>%
   roc_plot()
+```
 
+### Accuracy Metrics
+
+However, we can also quantify this assessment numerically Using the `roc_metric()` function you can get a variety of the most common metrics used to assess the model discrimination / accuracy.
+
+
+```{r}
 predict1 %>%
   roc_metric(event  = "event", predict = "predict_prop") %>% knitr::kable()
 ```
 
+
+However, if you already have a predefined cut-off for risk classification you may want to test the discrimination of that specific cutoff.
+
+For example, you have predefined that patients with a predicted risk of death >=9% would be considered to be "high-risk" (while those with a predicted risk <9% would be considered "low risk"). We can supply a dichotomised variable instead to the `roc_metric()` function to get the metrics for this specifically.
+
+ - Note that you cannot derive ROC curves for an already dichotomised variable (the prediction must be a continuous numerical value for that)
+
+
+```{r}
+predict1 %>%
+  dplyr::mutate(binary = ifelse(predict_prop>0.09, "High risk", "Low Risk")) %>%
+  roc_metric(event  = "event", predict = "binary") %>% knitr::kable()
+```
+
+
+## Comparing accuracy across multiple models
+
+Now let's say instead of just 1 model, you have multiple models you want to compare using the same data to determine which one is best in your context.
+
+Let's generate these models and then use `predictr()` to predict. These have been combined into one dataset (`multiple`), with the "model" column informing on which predictions belong to which model. 
 
 ```{r}
 fit2 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx", "sex"))
@@ -51,9 +124,16 @@ fit4 <- finalfit::glmmulti(data, dependent = "mort365", explanatory = c("rx", "s
 multiple <- list(fit1, fit2, fit3, fit4) %>%
   purrr::map_dfr(function(x){predictr(data = data, fit = x)}, .id="model") %>%
   dplyr::mutate(model = factor(model, levels = c(1:4),
-                               labels = c("Rx", "Rx & Sex", "Rx, Sex, & Obstruct", "Rx, Sex, Obstruct, & Differ"))) %>%
-  dplyr::mutate(binary = ifelse(predict_prop>0.10, 1, 0))
+                               labels = c("Rx", "Rx & Sex", "Rx, Sex, & Obstruct", "Rx, Sex, Obstruct, & Differ")))
 
+multiple %>% head(10) %>% knitr::kable()
+```
+
+Now we're set up for comparing the accuracy across all the models. This is handled automatically by `predictr` if we tell it which column ("model") has the information on which model the prediction is from.
+
+ - Please note if you forget to specify "model" when there's multiple models in a dataset, the function will assume all predictions come from a single model.
+
+```{r}
 multiple %>%
   roc_metric(model = "model", event  = "event", predict = "predict_prop") %>%
   tidyr::pivot_wider(id_cols = c("name"), names_from = "model", values_from = "metric") %>%
@@ -64,3 +144,6 @@ multiple %>%
   roc_plot()
 ```
 
+From above, we can see that as the number of variables added increases, there is improved accuracy of the model for predicting death at 1 year.
+
+ - However, note the substantial changes in the sensitivity / specificity as the model changes.
