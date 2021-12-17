@@ -11,10 +11,6 @@ knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr)
 
 ## Load data
 
-
-
-## Load data
-
 Firstly let's re-load our example data (the `survival::colon`)
 
 ```{r}

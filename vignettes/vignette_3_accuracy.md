@@ -2,8 +2,6 @@
 
 ## Load data
 
-## Load data
-
 Firstly let’s re-load our example data (the `survival::colon`)
 
     data <- tibble::as_tibble(survival::colon) %>%
@@ -92,13 +90,13 @@ sen\_uci
 0.01
 </td>
 <td style="text-align:right;">
-0.9906685
+0.9906783
 </td>
 <td style="text-align:right;">
-0.9879317
+0.9880342
 </td>
 <td style="text-align:right;">
-0.9934946
+0.9935415
 </td>
 </tr>
 <tr>
@@ -106,13 +104,13 @@ sen\_uci
 0.02
 </td>
 <td style="text-align:right;">
-0.9813369
+0.9813566
 </td>
 <td style="text-align:right;">
-0.9758634
+0.9760684
 </td>
 <td style="text-align:right;">
-0.9869893
+0.9870830
 </td>
 </tr>
 <tr>
@@ -120,13 +118,13 @@ sen\_uci
 0.03
 </td>
 <td style="text-align:right;">
-0.9720054
+0.9720350
 </td>
 <td style="text-align:right;">
-0.9637951
+0.9641026
 </td>
 <td style="text-align:right;">
-0.9804839
+0.9806245
 </td>
 </tr>
 <tr>
@@ -134,13 +132,13 @@ sen\_uci
 0.04
 </td>
 <td style="text-align:right;">
-0.9626738
+0.9627133
 </td>
 <td style="text-align:right;">
-0.9517268
+0.9521368
 </td>
 <td style="text-align:right;">
-0.9739785
+0.9741660
 </td>
 </tr>
 <tr>
@@ -148,13 +146,13 @@ sen\_uci
 0.05
 </td>
 <td style="text-align:right;">
-0.9533423
+0.9533916
 </td>
 <td style="text-align:right;">
-0.9396585
+0.9401709
 </td>
 <td style="text-align:right;">
-0.9674732
+0.9677075
 </td>
 </tr>
 <tr>
@@ -162,13 +160,13 @@ sen\_uci
 0.06
 </td>
 <td style="text-align:right;">
-0.9440108
+0.9440699
 </td>
 <td style="text-align:right;">
-0.9275902
+0.9282051
 </td>
 <td style="text-align:right;">
-0.9609678
+0.9612490
 </td>
 </tr>
 <tr>
@@ -176,13 +174,13 @@ sen\_uci
 0.07
 </td>
 <td style="text-align:right;">
-0.9346792
+0.9347482
 </td>
 <td style="text-align:right;">
-0.9155219
+0.9162393
 </td>
 <td style="text-align:right;">
-0.9544624
+0.9547905
 </td>
 </tr>
 <tr>
@@ -190,13 +188,13 @@ sen\_uci
 0.08
 </td>
 <td style="text-align:right;">
-0.9253477
+0.9254266
 </td>
 <td style="text-align:right;">
-0.9034536
+0.9042735
 </td>
 <td style="text-align:right;">
-0.9479571
+0.9483320
 </td>
 </tr>
 <tr>
@@ -204,13 +202,13 @@ sen\_uci
 0.09
 </td>
 <td style="text-align:right;">
-0.9160161
+0.9161049
 </td>
 <td style="text-align:right;">
-0.8913854
+0.8923077
 </td>
 <td style="text-align:right;">
-0.9414517
+0.9418735
 </td>
 </tr>
 </tbody>
