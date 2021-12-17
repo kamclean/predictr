@@ -106,7 +106,7 @@ knitr::kable(head(probast_prep, 10))
 
 Now we have the data in the required format, we can then plot it using `probast_plot()`. This produces a high quality ggplot of the PROBAST results.
 
-```{r, fig.height=7, fig.width=5}
+```{r, fig.height=9, fig.width=5}
  predictr::example_probast %>%
   probast_format(id = "score", type = "type") %>%
   probast_plot()
@@ -118,7 +118,7 @@ For PROBAST, the risk of bias (ROB) assessment is a composite assessment across 
 ```{r}
  predictr::example_probast %>%
   probast_format(id = "score", type = "type") %>%
-  probast_table() %>% knitr::kable()
+  probast_table() %>%  head(10) %>% knitr::kable()
 
 ```
 

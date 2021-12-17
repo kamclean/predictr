@@ -1,14 +1,15 @@
 ---
 title: "vignette_roc"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr)
+knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr); library(patchwork);library(ggplot2)
 ```
 
-## R Markdown
+## Load data
 
+Firstly let's re-load our example data (the `survival::colon`)
 
 ```{r}
 data <- tibble::as_tibble(survival::colon) %>%
@@ -25,27 +26,68 @@ data <- tibble::as_tibble(survival::colon) %>%
                 differ = factor(differ, levels = c(1,2,3), labels = c("Well", "Moderate", "Poor")),
                 extent = factor(extent, levels = c(1,2,3, 4), labels = c("Submucosa", "Muscle", "Serosa", "Contiguous Structures")),
                 surg = factor(surg, levels = c(0,1), labels = c("Short", "Long")))
+```
 
+Now lets create our model fit (`fit`).
+
+```{r}
 fit <- finalfit::glmmulti(data, dependent = "mort365",
                           explanatory = c("rx", "sex","obstruct", "differ", "adhere", "perfor", "extent", "nodes", "surg"))
 ```
 
-```{r cars}
-cal_table(fit = fit) %>% knitr::kable()
+## Evaluating Calibration
 
-data %>%
-  predictr(fit = fit) %>%
-  cal_table(risk_ntile = 5, risk_class = c(0.05, 0.06, 0.1, 0.2)) %>% knitr::kable()
+## Calibration across Risk Groups
+
+Traditionally, calibration would be assessed with plots of the proportion of observed events (y-axis) within specified risk groups (x-axis). This might be within quantiles (the sample equally divided into X groups) or risk classifcations (specifiying the exact splits between groups).
+
+The `cal_plot()` function allows both to be done to allow visualisation of the data.
+
+```{r, fig.width=12, fig.height=4}
+cal_plot(fit = fit, risk_ntile = 5) + ggtitle("A. Risk Quantile") + cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.05, 0.06, 0.1, 0.2)) + ggtitle("B. Risk Classification")
+
 ```
+
+
+The categoried data can also be displayed in tables using the `cal_table()` function:
+
+```{r cars}
+table <- data %>%
+  predictr(fit = fit) %>%
+  cal_table(risk_ntile = 5, risk_class = c(0.05, 0.06, 0.1, 0.2))
+
+table$ntile %>% knitr::kable()
+
+table$class %>% knitr::kable()
+
+```
+
+Traditionally calibration has been assessed via a Hosmer–Lemeshow (HL) test to determine whether there is a perfect linear relationship between the observed and predicted risk. The sample is divided into quantiles of predicted risk (typically deciles).
+
+- However, this has many issues (oversensitive in large samples, losing nuance / power by categorisation, etc).
+
+Using the `cal_metric()` function, we find the Hosmer–Lemeshow (HL) test p-value is:
+
+```{r, warning=F}
+cal_metric(fit = fit, risk_ntile = 10, hltest = T) %>% dplyr::pull(hl)
+```
+This suggests there is no statistical evidence of poor calibration across the risk deciles.
+
+
+## Calibration across Continuous Risk
+
+However, while more understandable, this form of risk categorisation can be arbitrary and loses nuances in the relationship.
+
+Increasingly, calibration has been recommended to be assessed with the predicted event rate as a continuous variable, plotted against the occurrence of events (0 = "No", 1 = "Yes"). We then plot a Loess curve (line of best fit) to evaluate against a linear relationship, and look at the intercept/slope instead.
 
 ```{r}
 cal_plot(predictr = data %>% predictr(fit = fit), se=T)
-cal_plot(fit = fit, risk_ntile = 5)
-cal_plot(predictr = data %>% predictr(fit = fit), risk_class = c(0.05, 0.06, 0.1, 0.2))
-```
 
+```
+We can assess the intercept and slope of the calibration curve using `cal_metric()`. A "perfect" calibration will have an intercept of 0 and a slope of 1.
+
+For more information on how to interpret the results of these calibration curves, please see the useful paper [Calibration: the Achilles heel of predictive analytics](https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-019-1466-7).
 
 ```{r}
-cal_metric(fit = fit, hltest = T) %>% knitr::kable()
 cal_metric(predictr = data %>% predictr(fit = fit)) %>% knitr::kable()
 ```

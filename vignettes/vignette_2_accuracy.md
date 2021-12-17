@@ -90,13 +90,13 @@ sen\_uci
 0.01
 </td>
 <td style="text-align:right;">
-0.9907376
+0.9906903
 </td>
 <td style="text-align:right;">
-0.9879495
+0.9877996
 </td>
 <td style="text-align:right;">
-0.9934283
+0.9934219
 </td>
 </tr>
 <tr>
@@ -104,13 +104,13 @@ sen\_uci
 0.02
 </td>
 <td style="text-align:right;">
-0.9814751
+0.9813805
 </td>
 <td style="text-align:right;">
-0.9758990
+0.9755991
 </td>
 <td style="text-align:right;">
-0.9868566
+0.9868438
 </td>
 </tr>
 <tr>
@@ -118,13 +118,13 @@ sen\_uci
 0.03
 </td>
 <td style="text-align:right;">
-0.9722127
+0.9720708
 </td>
 <td style="text-align:right;">
-0.9638485
+0.9633987
 </td>
 <td style="text-align:right;">
-0.9802849
+0.9802657
 </td>
 </tr>
 <tr>
@@ -132,13 +132,13 @@ sen\_uci
 0.04
 </td>
 <td style="text-align:right;">
-0.9629502
+0.9627611
 </td>
 <td style="text-align:right;">
-0.9517980
+0.9511983
 </td>
 <td style="text-align:right;">
-0.9737132
+0.9736877
 </td>
 </tr>
 <tr>
@@ -146,13 +146,13 @@ sen\_uci
 0.05
 </td>
 <td style="text-align:right;">
-0.9536878
+0.9534514
 </td>
 <td style="text-align:right;">
-0.9397475
+0.9389978
 </td>
 <td style="text-align:right;">
-0.9671416
+0.9671096
 </td>
 </tr>
 <tr>
@@ -160,13 +160,13 @@ sen\_uci
 0.06
 </td>
 <td style="text-align:right;">
-0.9444254
+0.9441416
 </td>
 <td style="text-align:right;">
-0.9276969
+0.9267974
 </td>
 <td style="text-align:right;">
-0.9605699
+0.9605315
 </td>
 </tr>
 <tr>
@@ -174,13 +174,13 @@ sen\_uci
 0.07
 </td>
 <td style="text-align:right;">
-0.9351629
+0.9348319
 </td>
 <td style="text-align:right;">
-0.9156464
+0.9145969
 </td>
 <td style="text-align:right;">
-0.9539982
+0.9539534
 </td>
 </tr>
 <tr>
@@ -188,13 +188,13 @@ sen\_uci
 0.08
 </td>
 <td style="text-align:right;">
-0.9259005
+0.9255222
 </td>
 <td style="text-align:right;">
-0.9035959
+0.9023965
 </td>
 <td style="text-align:right;">
-0.9474265
+0.9473753
 </td>
 </tr>
 <tr>
@@ -202,13 +202,13 @@ sen\_uci
 0.09
 </td>
 <td style="text-align:right;">
-0.9166380
+0.9162125
 </td>
 <td style="text-align:right;">
-0.8915454
+0.8901961
 </td>
 <td style="text-align:right;">
-0.9408548
+0.9407972
 </td>
 </tr>
 </tbody>
