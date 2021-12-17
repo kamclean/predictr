@@ -7,6 +7,8 @@ output: md_document
 knitr::opts_chunk$set(echo = T);library(dplyr);library(predictr); library(patchwork);library(ggplot2)
 ```
 
+# Vignette: Evaluating Model Calibration
+
 ## Load data
 
 Firstly let's re-load our example data (the `survival::colon`)

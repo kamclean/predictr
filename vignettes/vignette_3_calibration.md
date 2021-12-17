@@ -1,3 +1,5 @@
+# Vignette: Evaluating Model Calibration
+
 ## Load data
 
 Firstly let’s re-load our example data (the `survival::colon`)
