@@ -9,3 +9,5 @@ inst/doc
 packrat/lib*/
 .httr-oauth
 .Rbuildignore
+presentation/
+R/dca.R
