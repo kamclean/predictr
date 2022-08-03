@@ -27,7 +27,7 @@ tripod_format <- function(data, id = "id", type = "type"){
     dplyr::select(all_of(columns))
 
   # Check only 3 types
-  check_type <- data %>% dplyr::filter(! type %in% c("dv", "d", "v" ))
+  check_type <- data %>% dplyr::filter(! type %in% c("d", "dvi", "dve", "dvie", "ve"))
   if(nrow(check_type)>0){stop(paste0("Please ensure all studies have one of 3 types assigned: d, dv, or v"))}
 
   out <- data %>%
@@ -41,14 +41,16 @@ tripod_format <- function(data, id = "id", type = "type"){
                                     value %in% c("na", "not applicable", "not applicable (na)") ~ NA_character_)) %>%
 
     # Filter for items relevant for specific study design
-    dplyr::filter(! (type=="v"&item %in% c("10a", "10b", "14a", "14b", "15a", "15b"))) %>%
+    dplyr::filter(! (type=="ve"&item %in% c("10a", "10b", "14a", "14b", "15a", "15b"))) %>%
     dplyr::filter(! (type=="d"&item %in% c("10c", "10e", "12", "13c", "17", "19a"))) %>%
     dplyr::mutate(item = factor(item, levels = var_item),
                   value = factor(value, levels = c("N", "P", "Y"), labels = c("No", "Partial", "Yes")),
-                  type = factor(type, levels = c("d", "dv", "v"),
+                  type = factor(type, levels = c("d", "dvi", "dve", "dvie", "ve"),
                                 labels = c("Derivation",
-                                           "Derivation + Validation",
-                                           "Validation")))
+                                           "Derivation +\nValidation (Internal)",
+                                           "Derivation +\nValidation (External)",
+                                           "Derivation +\nValidation (Both)",
+                                           "Validation\n(External)")))
 
   # add check to make sure no remaining NA
   return(out)}
