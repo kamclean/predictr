@@ -111,6 +111,6 @@ probast_format <- function(data, id = "id", type = "type"){
 
   out <- dplyr::bind_rows(data_rob, data_rob_overall, data_app, data_app_overall) %>%
     dplyr::select(id:subdomain, assess, item, value) %>%
-    dplyr::mutate(assess = factor(assess, levels = c("Low", "Unclear", "High")))
+    dplyr::mutate(assess = factor(assess, levels = c("High", "Unclear", "Low")))
 
   return(out)}
