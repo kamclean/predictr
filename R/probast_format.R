@@ -27,9 +27,9 @@ probast_format <- function(data, id = "id", type = "type"){
     dplyr::select(id, type, starts_with("rob_"), starts_with("app_")) %>%
     dplyr::select(all_of(columns))
 
-  # Check only 3 types
-  check_type <- data %>% dplyr::filter(! type %in% c("dv", "d", "v" ))
-  if(nrow(check_type)>0){stop(paste0("Please ensure all studies have one of 3 types assigned: d, dv, or v"))}
+  # Check only 5 types
+  check_type <- data %>% dplyr::filter(! type %in% c("d", "dvi", "dve", "dvie", "ve"))
+  if(nrow(check_type)>0){stop(paste0("Please ensure all studies have one of 5 types assigned: d, dvi, dve, dvie, ve"))}
 
   long <-   suppressWarnings(data %>%
                                dplyr::mutate(across(everything(), function(x){as.character(x)})) %>%
@@ -37,27 +37,21 @@ probast_format <- function(data, id = "id", type = "type"){
                                tidyr::separate(col = "name", into = c("domain", "subdomain", "item"),sep  ="_")) %>%
 
     dplyr::mutate(item = factor(as.numeric(item)),
-                  subdomain = factor(subdomain, levels = c("1","2", "3", "4"),
-                                     labels = c("Participants", "Predictors", "Outcome", "Analysis")),
+                  subdomain = factor(subdomain, levels = c("5", "1","2", "3", "4"),
+                                     labels = c( "Overall","Participants", "Predictors", "Outcome", "Analysis")),
                   domain = factor(domain, levels = c("rob", "app"), labels = c("Risk of Bias", "Applicability")),
-                  type = factor(type, levels = c("d", "dv", "v"),
+                  type = factor(type, levels = c("d", "dvi", "dve", "dvie", "ve"),
                                 labels = c("Derivation",
-                                           "Derivation + Validation",
-                                           "Validation")))
+                                           "Derivation +\nValidation (Internal)",
+                                           "Derivation +\nValidation (External)",
+                                           "Derivation +\nValidation (Both)",
+                                           "Validation\n(External)")))
 
-  data_app <- long %>%
-    filter(domain == "Applicability") %>%
-    dplyr::mutate(value = tolower(value),
-                  value = case_when(value %in% c("low", "l") ~ "Low",
-                                    value %in% c("high", "high") ~ "High",
-                                    value %in% c("unclear", "u") ~ "Unclear"),
-                  assess = factor(value, levels = c("High", "Unclear", "Low")))
-
-  data_rob <- long %>%
+   data_rob <- long %>%
     dplyr::filter(domain == "Risk of Bias") %>%
 
     # Filter for items relevant for specific study design
-    dplyr::filter(! (type=="Validation"&subdomain=="Analysis"&item %in% c("5", "8", "9"))) %>%
+    dplyr::filter(! (type=="Validation (External)"&subdomain=="Analysis"&item %in% c("5", "8", "9"))) %>%
 
     dplyr::mutate(value = tolower(value),
                   value = case_when(value %in% c("y", "yes", "yes (y)") ~ "Y",
@@ -76,8 +70,46 @@ probast_format <- function(data, id = "id", type = "type"){
     dplyr::ungroup() %>%
     dplyr::select(-starts_with("n_"))
 
+  data_rob_overall <- data_rob %>%
+    dplyr::distinct(id,type, domain, subdomain, assess) %>%
+    dplyr::group_by(id,type, domain) %>%
+    dplyr::summarise(n_low = sum(assess=="Low", na.rm = T),
+                  n_high = sum(assess=="High", na.rm = T),
+                  n_unclear = sum(assess=="Unclear", na.rm = T),
+                  assess = case_when(n_low>0&n_high==0&n_unclear==0 ~ "Low",
+                                      n_low>=0&n_high==0&n_unclear>0 ~ "Unclear",
+                                      n_low>=0&n_high>0&n_unclear>=0 ~ "High",
+                                      TRUE ~ NA_character_),
+                  .groups = "drop") %>%
+    dplyr::mutate(subdomain = factor("Overall", levels = levels(data_rob$subdomain))) %>%
+    dplyr::select(-starts_with("n_"))
 
-  out <- dplyr::bind_rows(data_rob, data_app) %>%
+  data_app <- long %>%
+    filter(domain == "Applicability") %>%
+    dplyr::mutate(value = tolower(value),
+                  value = case_when(value %in% c("low", "l") ~ "Low",
+                                    value %in% c("high", "high") ~ "High",
+                                    value %in% c("unclear", "u") ~ "Unclear"),
+                  assess = factor(value, levels = c("High", "Unclear", "Low")))
+
+
+
+  data_app_overall <- data_app %>%
+    dplyr::distinct(id,type, domain, subdomain, assess) %>%
+    dplyr::group_by(id,type, domain) %>%
+    dplyr::summarise(n_low = sum(assess=="Low", na.rm = T),
+                     n_high = sum(assess=="High", na.rm = T),
+                     n_unclear = sum(assess=="Unclear", na.rm = T),
+                     assess = case_when(n_low>0&n_high==0&n_unclear==0 ~ "Low",
+                                        n_low>=0&n_high==0&n_unclear>0 ~ "Unclear",
+                                        n_low>=0&n_high>0&n_unclear>=0 ~ "High",
+                                        TRUE ~ NA_character_),
+                     .groups = "drop") %>%
+    dplyr::mutate(subdomain = factor("Overall", levels = levels(data_rob$subdomain))) %>%
+    dplyr::select(-starts_with("n_"))
+
+
+  out <- dplyr::bind_rows(data_rob, data_rob_overall, data_app, data_app_overall) %>%
     dplyr::select(id:subdomain, assess, item, value)
 
   return(out)}
