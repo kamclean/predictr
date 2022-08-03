@@ -9,7 +9,8 @@
 #' @import dplyr
 #' @import tidyr
 #' @export
-
+probast_format(readRDS("~/predictr/data/example_probast.rds"), id = "score") %>%
+  probast_plot()
 # Function:
 probast_format <- function(data, id = "id", type = "type"){
 
@@ -110,6 +111,7 @@ probast_format <- function(data, id = "id", type = "type"){
 
 
   out <- dplyr::bind_rows(data_rob, data_rob_overall, data_app, data_app_overall) %>%
-    dplyr::select(id:subdomain, assess, item, value)
+    dplyr::select(id:subdomain, assess, item, value) %>%
+    dplyr::mutate(assess = factor(assess, levels = c("Low", "Unclear", "High")))
 
   return(out)}
