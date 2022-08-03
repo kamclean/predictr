@@ -9,8 +9,7 @@
 #' @import dplyr
 #' @import tidyr
 #' @export
-probast_format(readRDS("~/predictr/data/example_probast.rds"), id = "score") %>%
-  probast_plot()
+
 # Function:
 probast_format <- function(data, id = "id", type = "type"){
 
