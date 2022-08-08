@@ -12,3 +12,4 @@ packrat/lib*/
 presentation/
 R/dca.R
 vignettes/vignette_*.Rmd
+data-raw
