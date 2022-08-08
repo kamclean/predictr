@@ -11,3 +11,4 @@ packrat/lib*/
 .Rbuildignore
 presentation/
 R/dca.R
+vignettes/vignette_*.Rmd

@@ -12,6 +12,7 @@
 #' @import stringr
 #' @import dplyr
 #' @import tidyr
+#' @importFrom binom binom.wilson
 #' @importFrom finalfit glmmulti
 #' @importFrom generalhoslem logitgof
 #' @export
