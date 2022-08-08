@@ -162,93 +162,63 @@ item\_21
 <th style="text-align:left;">
 item\_22
 </th>
+<th style="text-align:right;">
+n
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+dvi
 </td>
 <td style="text-align:left;">
 Partial (P)
 </td>
 <td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
 No (N)
 </td>
 <td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-Yes (Y)
+No (N)
 </td>
 <td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+No (N)
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -278,15 +248,51 @@ Yes (Y)
 Yes (Y)
 </td>
 <td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
 No (N)
 </td>
 <td style="text-align:left;">
 Partial (P)
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1998)
+B2
 </td>
 <td style="text-align:left;">
 d
@@ -402,129 +408,135 @@ Yes (Y)
 <td style="text-align:left;">
 Yes (Y)
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arozullah et al. (2000)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Fuso et al. (2000)
+A1
+</td>
+<td style="text-align:left;">
+dvi
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+F1
 </td>
 <td style="text-align:left;">
 d
@@ -640,159 +652,16 @@ No (N)
 <td style="text-align:left;">
 No (N)
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arozullah et al. (2001)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2003)
+A2
 </td>
 <td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
+dvi
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -801,67 +670,16 @@ Yes (Y)
 Yes (Y)
 </td>
 <td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
+Yes (Y)
 </td>
 <td style="text-align:left;">
 Partial (P)
@@ -877,11 +695,214 @@ Yes (Y)
 </td>
 <td style="text-align:left;">
 No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2005)
+M1
+</td>
+<td style="text-align:left;">
+dvi
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+M2
 </td>
 <td style="text-align:left;">
 d
@@ -997,129 +1018,135 @@ Yes (Y)
 <td style="text-align:left;">
 No (N)
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Johnson et al. (2007)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Partial (P)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Scholes et al. (2009)
+J1
+</td>
+<td style="text-align:left;">
+dvi
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Partial (P)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S1
 </td>
 <td style="text-align:left;">
 d
@@ -1235,13 +1262,16 @@ No (N)
 <td style="text-align:left;">
 Yes (Y)
 </td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-ARISCAT (2010)
+A3
 </td>
 <td style="text-align:left;">
-dv
+dvi
 </td>
 <td style="text-align:left;">
 Partial (P)
@@ -1353,6 +1383,9 @@ Yes (Y)
 </td>
 <td style="text-align:left;">
 Yes (Y)
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 </tbody>
@@ -1393,10 +1426,10 @@ value
 <tbody>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 1
@@ -1407,10 +1440,10 @@ Partial
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 2
@@ -1421,10 +1454,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 3a
@@ -1435,10 +1468,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 3b
@@ -1449,10 +1482,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 4a
@@ -1463,10 +1496,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 4b
@@ -1477,10 +1510,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 5a
@@ -1491,10 +1524,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 5b
@@ -1505,10 +1538,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 5c
@@ -1519,10 +1552,10 @@ Yes
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
 </td>
 <td style="text-align:left;">
 6a
@@ -1539,10 +1572,10 @@ Now we have the data in the required format, we can then plot it using
 results.
 
      predictr::example_tripod %>%
-      tripod_format(id = "score", type = "type") %>%
-      tripod_plot()
+       predictr::tripod_format(id = "score", type = "type") %>%
+       predictr::tripod_plot()
 
-![](vignette_4_quality_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](vignette_4_quality_files/figure-markdown_strict/unnamed-chunk-15-1.png)
 
 ## Prediction model Risk Of Bias ASsessment Tool (PROBAST)
 
@@ -1671,89 +1704,15 @@ app\_2
 <th style="text-align:left;">
 app\_3
 </th>
+<th style="text-align:right;">
+n
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Probably no (PN)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-Low
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Brooks–Brunn (1998)
+B1
 </td>
 <td style="text-align:left;">
 d
@@ -1827,13 +1786,96 @@ Low
 <td style="text-align:left;">
 Low
 </td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Arozullah et al. (2000)
+B2
 </td>
 <td style="text-align:left;">
-dv
+dvi
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably no (PN)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A1
+</td>
+<td style="text-align:left;">
+dve
 </td>
 <td style="text-align:left;">
 Probably yes (PY)
@@ -1904,13 +1946,16 @@ Low
 <td style="text-align:left;">
 High
 </td>
+<td style="text-align:right;">
+1
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Fuso et al. (2000)
+F1
 </td>
 <td style="text-align:left;">
-d
+dvie
 </td>
 <td style="text-align:left;">
 Probably yes (PY)
@@ -1981,102 +2026,28 @@ Low
 <td style="text-align:left;">
 Low
 </td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arozullah et al. (2001)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-Low
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2003)
+A2
 </td>
 <td style="text-align:left;">
-dv
+ve
 </td>
 <td style="text-align:left;">
-Yes (Y)
+Probably yes (PY)
 </td>
 <td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
+Probably yes (PY)
 </td>
 <td style="text-align:left;">
 Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -2094,34 +2065,34 @@ Yes (Y)
 Probably yes (PY)
 </td>
 <td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
 No information (NI)
 </td>
 <td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No information (NI)
+Yes (Y)
 </td>
 <td style="text-align:left;">
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No information (NI)
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -2133,166 +2104,15 @@ Low
 Low
 </td>
 <td style="text-align:left;">
-High
+Low
+</td>
+<td style="text-align:right;">
+2
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2005)
-</td>
-<td style="text-align:left;">
-d
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-High
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-Low
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Johnson et al. (2007)
-</td>
-<td style="text-align:left;">
-dv
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably yes (PY)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Probably no (PN)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No information (NI)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-High
-</td>
-<td style="text-align:left;">
-Low
-</td>
-<td style="text-align:left;">
-High
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Scholes et al. (2009)
+M1
 </td>
 <td style="text-align:left;">
 d
@@ -2301,13 +2121,22 @@ d
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No (N)
+Yes (Y)
 </td>
 <td style="text-align:left;">
-Probably yes (PY)
+Yes (Y)
 </td>
 <td style="text-align:left;">
-Probably yes (PY)
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -2325,25 +2154,10 @@ Yes (Y)
 Probably yes (PY)
 </td>
 <td style="text-align:left;">
-Probably no (PN)
-</td>
-<td style="text-align:left;">
 Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-Yes (Y)
-</td>
-<td style="text-align:left;">
-No (N)
 </td>
 <td style="text-align:left;">
 No information (NI)
-</td>
-<td style="text-align:left;">
-No (N)
 </td>
 <td style="text-align:left;">
 No information (NI)
@@ -2352,7 +2166,13 @@ No information (NI)
 Yes (Y)
 </td>
 <td style="text-align:left;">
-No (N)
+No information (NI)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No information (NI)
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -2364,15 +2184,258 @@ Low
 Low
 </td>
 <td style="text-align:left;">
-Low
+High
+</td>
+<td style="text-align:right;">
+1
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-ARISCAT (2010)
+M2
 </td>
 <td style="text-align:left;">
-dv
+dvi
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+High
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+J1
+</td>
+<td style="text-align:left;">
+dve
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably no (PN)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+High
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+High
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S1
+</td>
+<td style="text-align:left;">
+dvie
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Probably yes (PY)
+</td>
+<td style="text-align:left;">
+Probably no (PN)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+No information (NI)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+No (N)
+</td>
+<td style="text-align:left;">
+Yes (Y)
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:left;">
+Low
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A3
+</td>
+<td style="text-align:left;">
+ve
 </td>
 <td style="text-align:left;">
 Yes (Y)
@@ -2442,6 +2505,9 @@ Low
 </td>
 <td style="text-align:left;">
 Low
+</td>
+<td style="text-align:right;">
+3
 </td>
 </tr>
 </tbody>
@@ -2491,10 +2557,10 @@ value
 <tbody>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2514,10 +2580,10 @@ PY
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2537,10 +2603,10 @@ PY
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2560,10 +2626,10 @@ PY
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2583,10 +2649,10 @@ PY
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2606,10 +2672,10 @@ Y
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2629,10 +2695,10 @@ Y
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2652,10 +2718,10 @@ N
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2675,10 +2741,10 @@ Y
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2698,10 +2764,10 @@ PY
 </tr>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
+B1
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation
 </td>
 <td style="text-align:left;">
 Risk of Bias
@@ -2730,7 +2796,7 @@ results.
       probast_format(id = "score", type = "type") %>%
       probast_plot()
 
-![](vignette_4_quality_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](vignette_4_quality_files/figure-markdown_strict/unnamed-chunk-18-1.png)
 
 For PROBAST, the risk of bias (ROB) assessment is a composite assessment
 across all screening questions in the domain. This is calculated
@@ -2811,80 +2877,15 @@ Analysis 8
 <th style="text-align:left;">
 Analysis 9
 </th>
+<th style="text-align:left;">
+Overall NA
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Brooks–Brunn (1997)
-</td>
-<td style="text-align:left;">
-Derivation + Validation
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-PN
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Brooks–Brunn (1998)
+B1
 </td>
 <td style="text-align:left;">
 Derivation
@@ -2949,13 +2950,87 @@ N
 <td style="text-align:left;">
 Y
 </td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Arozullah et al. (2000)
+B2
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PN
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A1
+</td>
+<td style="text-align:left;">
+Derivation + Validation (External)
 </td>
 <td style="text-align:left;">
 PY
@@ -3017,13 +3092,16 @@ Y
 <td style="text-align:left;">
 Y
 </td>
+<td style="text-align:left;">
+NA
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Fuso et al. (2000)
+F1
 </td>
 <td style="text-align:left;">
-Derivation
+Derivation + Validation (Both)
 </td>
 <td style="text-align:left;">
 PY
@@ -3085,93 +3163,28 @@ Y
 <td style="text-align:left;">
 Y
 </td>
-</tr>
-<tr>
 <td style="text-align:left;">
-Arozullah et al. (2001)
-</td>
-<td style="text-align:left;">
-Derivation + Validation
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
+NA
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2003)
+A2
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Validation (External)
 </td>
 <td style="text-align:left;">
-Y
+PY
 </td>
 <td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
+PY
 </td>
 <td style="text-align:left;">
 Y
+</td>
+<td style="text-align:left;">
+PY
 </td>
 <td style="text-align:left;">
 Y
@@ -3189,178 +3202,45 @@ Y
 PY
 </td>
 <td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
 NI
 </td>
 <td style="text-align:left;">
 Y
 </td>
 <td style="text-align:left;">
-NI
+Y
 </td>
 <td style="text-align:left;">
 Y
 </td>
 <td style="text-align:left;">
-NI
+N
 </td>
 <td style="text-align:left;">
 Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NA
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-McAlister et al. (2005)
-</td>
-<td style="text-align:left;">
-Derivation
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-NI
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Johnson et al. (2007)
-</td>
-<td style="text-align:left;">
-Derivation + Validation
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PY
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-PN
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-NI
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
-</td>
-<td style="text-align:left;">
-Y
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Scholes et al. (2009)
+M1
 </td>
 <td style="text-align:left;">
 Derivation
@@ -3369,13 +3249,22 @@ Derivation
 Y
 </td>
 <td style="text-align:left;">
-N
+Y
 </td>
 <td style="text-align:left;">
-PY
+Y
 </td>
 <td style="text-align:left;">
-PY
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
 </td>
 <td style="text-align:left;">
 Y
@@ -3393,25 +3282,10 @@ Y
 PY
 </td>
 <td style="text-align:left;">
-PN
-</td>
-<td style="text-align:left;">
 Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:left;">
-N
 </td>
 <td style="text-align:left;">
 NI
-</td>
-<td style="text-align:left;">
-N
 </td>
 <td style="text-align:left;">
 NI
@@ -3420,18 +3294,240 @@ NI
 Y
 </td>
 <td style="text-align:left;">
-N
+NI
 </td>
 <td style="text-align:left;">
 Y
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NA
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-ARISCAT (2010)
+M2
 </td>
 <td style="text-align:left;">
-Derivation + Validation
+Derivation + Validation (Internal)
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+J1
+</td>
+<td style="text-align:left;">
+Derivation + Validation (External)
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+PN
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+S1
+</td>
+<td style="text-align:left;">
+Derivation + Validation (Both)
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+PY
+</td>
+<td style="text-align:left;">
+PN
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+NI
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+N
+</td>
+<td style="text-align:left;">
+Y
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A3
+</td>
+<td style="text-align:left;">
+Validation (External)
 </td>
 <td style="text-align:left;">
 Y
@@ -3492,6 +3588,9 @@ PN
 </td>
 <td style="text-align:left;">
 Y
+</td>
+<td style="text-align:left;">
+NA
 </td>
 </tr>
 </tbody>
