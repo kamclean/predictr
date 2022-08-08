@@ -8,6 +8,7 @@
 #' @param se Logical value specifying if confidence intervals should be added to the plot
 #' @return ggplot of the calibration plot with predicted risk either continuous (default) or categoried by quantiles or risk classes.
 #' @import tibble
+#' @import binom
 #' @import stringr
 #' @import dplyr
 #' @import tidyr

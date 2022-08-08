@@ -10,6 +10,7 @@
 #' @import stringr
 #' @import dplyr
 #' @import tidyr
+#' @import forcats
 #' @importFrom reportROC reportROC
 #' @importFrom epiR epi.tests
 #' @export
