@@ -4,6 +4,7 @@
 #' @param data Output from tripod_format.
 #' @return TRIPOD plot.
 #' @import ggplot2
+#' @importFrom stats loess.control median predict
 #' @export
 
 tripod_plot <- function(data){
