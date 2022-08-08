@@ -24,5 +24,6 @@ Imports: dplyr,
   reportROC,
   stringr,
   tibble,
-  tidyr
+  tidyr,
+  knitr
 VignetteBuilder: knitr
