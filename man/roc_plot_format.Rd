@@ -9,8 +9,8 @@ roc_plot_format(
   model = NULL,
   event = "event",
   predict = "predict",
-  smooth = TRUE,
-  confint = TRUE
+  smooth = F,
+  confint = F
 )
 }
 \arguments{
@@ -22,9 +22,9 @@ roc_plot_format(
 
 \item{predict}{String specifying the column name containing predicted probability of outcome (default ="prediction")}
 
-\item{smooth}{Logical value specifying if the ROC curve should be smoothed (default=TRUE)}
+\item{smooth}{Logical value specifying if the ROC curve should be smoothed (default=FALSE)}
 
-\item{confint}{Logical value specifying if the confidence interval of the sensitivity/specificity should be calculated.}
+\item{confint}{Logical value specifying if the confidence interval of the sensitivity/specificity should be calculated (default = FALSE)}
 }
 \value{
 Tibble with sensitivity/specificity for one or more models.

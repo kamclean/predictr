@@ -54,9 +54,10 @@ knitr::kable(head(tripod_prep, 10))
 Now we have the data in the required format, we can then plot it using `tripod_plot()`. This produces a high quality ggplot of the TRIPOD results.
 
 ```{r, fig.height=7}
+
  predictr::example_tripod %>%
-  tripod_format(id = "score", type = "type") %>%
-  tripod_plot()
+   predictr::tripod_format(id = "score", type = "type") %>%
+   predictr::tripod_plot()
 ```
 
 ## Prediction model Risk Of Bias ASsessment Tool (PROBAST)
