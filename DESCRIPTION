@@ -2,13 +2,27 @@ Package: predictr
 Type: Package
 Title: Facilitates development and validation of predictive models.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: as.person(c(
+    "Kenneth McLean <kmclean2@ed.ac.uk> [aut, cre]", 
+    "Steve Knight <stephenknight@doctors.org.uk> [aut]",
+    "Ewen Harrison <ewen.harrison@ed.ac.uk> [aut]"))
+Maintainer: Kenneth McLean <kmclean2@ed.ac.uk>
+Description: A holistic group of functions to help facilitate the development and validation of predictive models using R, from applying your models to evaluating your models according to their accuracy and calibration.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.1
-Depends: 
-    R (>= 2.10)
+Depends: R (>= 4.1.1)
+Imports: dplyr,
+  boot,
+  epiR,
+  finalfit,
+  generalhoslem,
+  ggplot2,
+  pROC,
+  purrr,
+  reportROC,
+  stringr,
+  tibble,
+  tidyr
+VignetteBuilder: knitr
